@@ -134,7 +134,9 @@ export default class Avatar extends Component<AvatarProps, AvatarState> {
         : {};
 
     const { children } = this.props;
+    // ref: https://github.com/NervJS/taro/issues/3663#issuecomment-508311459
     let renderChildren: any = null;
+    let childrenNode: any = null;
     if (src && isImgExist) {
       renderChildren = <Image src={src} onError={this.handleImgLoadError} />;
     } else if (icon) {
@@ -144,7 +146,7 @@ export default class Avatar extends Component<AvatarProps, AvatarState> {
         renderChildren = icon;
       }
     } else {
-      const childrenNode = this.avatarChildren;
+      childrenNode = this.avatarChildren;
       if (childrenNode || scale !== 1) {
         const transformString = `scale(${scale}) translateX(-50%)`;
         const childrenStyle: React.CSSProperties = {

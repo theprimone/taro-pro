@@ -1,5 +1,5 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import Avatar from '../../components/Avatar'
+import { AtAvatar, AtButton } from 'taro-ui'
 import { View, Button } from '@tarojs/components'
 import './index.less';
 
@@ -13,11 +13,8 @@ export class Welcome extends Component {
       <View className='hero'>
         <View className='header'>
           <View className='userInfo'>
-            <Avatar
-              src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
-              // shape='square'
-              // size={100}
-              style={{ border: '1px solid #dfdfdf' }}
+            <AtAvatar
+              image='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'
             />
             <View className='username'>admin</View>
             <View className='lastLogin'>2019-8-14 09:47:07</View>

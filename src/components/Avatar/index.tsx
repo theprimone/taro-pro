@@ -138,7 +138,9 @@ export default class Avatar extends Component<AvatarProps, AvatarState> {
     let renderChildren: any = null;
     let childrenNode: any = null;
     if (src && isImgExist) {
+      console.log('src && isImgExist')
       renderChildren = <Image src={src} onError={this.handleImgLoadError} />;
+      console.log('renderChildren')
     } else if (icon) {
       if (typeof icon === 'string') {
         renderChildren = <CustomIcon type={icon} />;

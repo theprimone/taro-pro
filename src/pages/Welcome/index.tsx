@@ -25,6 +25,7 @@ const gridData: GridDataItem[] = [
       color: '#4fdde6'
     },
     value: '表单',
+    url: '/pages/form/index',
   },
   {
     iconInfo: {

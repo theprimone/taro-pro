@@ -10,6 +10,8 @@ export default class List extends Component {
         <AtNavBar
           fixed
           title='列表'
+          leftIconType='chevron-left'
+          onClickLeftIcon={() => Taro.navigateBack()}
         />
         <View className='body'>
           <AtList>
